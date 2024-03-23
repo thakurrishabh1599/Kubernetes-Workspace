@@ -18,7 +18,7 @@ spec:
         - name: vprodb
           image: vprofile/vprofiledb:V1
           volumeMounts:
-            - mountPath: /varlib/mysql
+            - mountPath: /var/lib/mysql
               name: vpro-db-data
           ports:
             - name: vprodb-port
@@ -34,7 +34,7 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            VolumeID: vol-04d0ecb9a7e8d9dc7
+            volumeID: vol-04d0ecb9a7e8d9dc7
             fsType: ext4
       initContainers:
         - name: busybox
