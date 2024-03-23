@@ -33,9 +33,9 @@ spec:
         zone: ap-southeast-2a
       volumes:
         - name: vpro-db-data
-          aws_block_device:
-            volume_id: vol-04d0ecb9a7e8d9dc7
-            fs_type: ext4
+          awsElasticBlockStore:
+            VolumeID: vol-04d0ecb9a7e8d9dc7
+            fsType: ext4
       initContainers:
         - name: busybox
           image: busybox:latest
