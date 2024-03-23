@@ -27,6 +27,6 @@ spec:
         - name: init-memcached
           image: busybox
           command: ['sh','-c','until nslookup vpromc;do echo waiting memcached; sleep 2; done']
-        - name: init-rabbitMq
+        - name: init-rabbitmq
           image: busybox
           command: ['sh','-c','until nslookup vpromq01;do echo waiting rabbitMq; sleep 2; done']
